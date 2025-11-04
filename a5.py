@@ -112,7 +112,8 @@ class Board:
 
         for row in range(self.size):
             for col in range(self.size):
-                print(f"{row}, {col}")
+                lst = self.rows[row][col]
+                print(lst)
 
     def failure_test(self) -> bool:
         """Check if we've failed to correctly fill out the puzzle. If we find a cell
