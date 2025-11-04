@@ -106,7 +106,13 @@ class Board:
         Returns:
             a tuple of row, column index identifying the most constrained cell
         """
-        pass
+        min_length = 9
+        min_row = 0
+        min_col = 0
+
+        for row in range(self.size):
+            for col in range(self.size):
+                print(f"{row}, {col}")
 
     def failure_test(self) -> bool:
         """Check if we've failed to correctly fill out the puzzle. If we find a cell
