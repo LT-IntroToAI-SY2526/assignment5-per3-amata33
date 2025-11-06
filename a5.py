@@ -112,8 +112,13 @@ class Board:
 
         for row in range(self.size):
             for col in range(self.size):
-                lst = self.rows[row][col]
-                print(f"({row}, {col}): {lst}")
+                cell = self.rows[row][col]
+                if isinstance(cell, list):
+                    if len(cell) < min_length:
+                        min_length = len(cell)
+                        min_row = row
+                        min_col = col
+    return 
 
     def failure_test(self) -> bool:
         """Check if we've failed to correctly fill out the puzzle. If we find a cell
