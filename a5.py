@@ -368,7 +368,7 @@ if __name__ == "__main__":
     # #Place the 28 assignments in first_moves on the board.
     # for trip in first_moves:
     #     g.update(trip[0],trip[1],trip[2])
-    # g.print_pretty()
+    g.print_pretty()
     # #From the above print statement, you can see which numbers
     # #  have been assigned to the board, and then create test
     # #  cases by looking at the board and listing what values are
