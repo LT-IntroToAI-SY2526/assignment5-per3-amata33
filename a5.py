@@ -365,15 +365,16 @@ if __name__ == "__main__":
     # ##Now, let's write some quick tests to check update!
     # #Create a sudoku board.
     g = Board()
-    # #Place the 28 assignments in first_moves on the board.
-    # for trip in first_moves:
-    #     g.update(trip[0],trip[1],trip[2])
+    #Place the 28 assignments in first_moves on the board.
+    for trip in first_moves:
+        g.update(trip[0],trip[1],trip[2])
     g.print_pretty()
     # #From the above print statement, you can see which numbers
     # #  have been assigned to the board, and then create test
     # #  cases by looking at the board and listing what values are
     # #  still possible for a specific cell. I have created
-    # #  2 such test cases like that for you. 
+    # #  2 such test cases like that for you.
+    print(g) 
     assert g.rows[0][2] == [2,5,6], "update test 1"
     assert g.rows[5][5] == [3,7,9], "update test 2"
     assert g.num_nums_placed == 28, "update test 3"
